@@ -1,8 +1,13 @@
 import random
-word = random.choice(open("words.txt").read().split())
-print(word)
 
-length_of_word = len(word)
+
+def get_word():
+    word = random.choice(open("words.txt").read().split())
+    return word
+
+
+current_word = get_word()
+length_of_word = len(current_word)
 initial_output = '_' * length_of_word
 print(initial_output)
 guesses_left = length_of_word
